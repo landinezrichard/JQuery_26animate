@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8"/>
+		<title>26 Efectos personalizados con Animate</title>
+		
+		<!--Hojas de estilo -->		
+		<style type="text/css">
+			body,html{
+				background:#FFF;
+				margin:0;
+				padding:0;
+			}
+						
+			div{				
+				display:block;
+				margin:0 auto;
+				height:100px;				
+				width:400px;
+			}
+
+			#caja1{
+				background:#00ff00;
+				margin-bottom:100px;
+			}
+			
+			
+			#caja2{
+				background:#871f78;				
+			}
+			
+		</style>
+				
+		<!--Scripts Aca -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js">		
+		</script>
+		<script type="text/javascript" src="jquery.animate-colors.js"></script>
+		<script type="text/javascript">
+			
+			$(document).on("ready",function(){
+				$('#caja1').animate({
+						marginBottom:0,
+					},
+					5000,
+					function(){
+						$("#caja1").animate({
+							marginTop:100,
+							opacity:0.5,
+							backgroundColor:"#0000FF"
+						});
+					}
+				);
+				
+			});
+		
+		</script>
+		
+	</head>
+	<body>
+		<div id="caja1">
+		</div>
+		<div id="caja2">
+		</div>
+		
+	</body>
+</html>
